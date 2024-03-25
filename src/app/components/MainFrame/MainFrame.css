@@ -1,0 +1,16 @@
+.deltoid {
+  position: relative;
+  width: 300px; /* Adjust the width of the deltoid */
+  height: 300px; /* Adjust the height of the deltoid */
+  clip-path: polygon(60% 0%,100% 40%,40% 100%,0% 60%);
+  overflow: hidden;
+}
+
+.img {
+  width: 200px !important; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: 50px; /* Adjust positioning to make SVG pop out */
+  left: 45%; /* Adjust positioning to make SVG pop out */
+  transform: translateX(-50%);
+}

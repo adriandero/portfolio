@@ -1,0 +1,21 @@
+
+#contact-button-touch-icon, #contact-button, .link {
+    transition: transform 0.3s ease;
+}
+
+#contact-button:hover  {
+
+	#contact-button-touch-icon {
+		transform: rotate(15deg);	
+	}
+    
+    transform: scale(1.1);
+}
+
+.link:hover {
+    transform: translateY(5px);
+}
+
+#nav-container header {
+    max-width: 1280px !important;
+}
