@@ -1,5 +1,6 @@
 .stars-container {
   position: absolute;
+  overflow: hidden;
 }
 
 @keyframes animateBg {
