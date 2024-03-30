@@ -22,7 +22,7 @@
   border-radius: 50%;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
     0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
-  animation: animate 3s linear infinite;
+  animation: animate 5s linear infinite;
 }
 .stars-container > *::before {
   content: "";
@@ -36,13 +36,19 @@
 @keyframes animate {
   0% {
     transform: rotate(315deg) translateX(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  55% {
     opacity: 1;
   }
   70% {
-    opacity: 1;
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
   }
   100% {
-    transform: rotate(315deg) translateX(-1000px);
     opacity: 0;
   }
 }
@@ -51,69 +57,68 @@
   right: 0;
   left: initial;
   animation-delay: 0s;
-  animation-duration: 1s;
-  z-index: 1000;
+  animation-duration: 4s;
 }
 .star2 {
   top: 0;
   right: 80px;
   left: initial;
   animation-delay: 0.2s;
-  animation-duration: 3s;
+  animation-duration: 4.4s;
 }
 .star3 {
   top: 80;
   right: 0px;
   left: initial;
   animation-delay: 0.4s;
-  animation-duration: 2s;
+  animation-duration: 5.2;
 }
 .star4 {
   top: 0;
   right: 180px;
   left: initial;
   animation-delay: 0.6s;
-  animation-duration: 1.5s;
+  animation-duration: 4.1s;
 }
 .star5 {
   top: 0;
   right: 400px;
   left: initial;
   animation-delay: 0.8s;
-  animation-duration: 2.5s;
+  animation-duration: 4.9s;
 }
 .star6 {
   top: 0;
   right: 600px;
   left: initial;
   animation-delay: 1s;
-  animation-duration: 3s;
+  animation-duration: 5.4s;
 }
 .star7 {
   top: 300px;
-  right: 0px;
+  left: 0px;
   left: initial;
   animation-delay: 1.2s;
-  animation-duration: 1.75s;
+  animation-duration: 2s;
 }
 .star8 {
   top: 0px;
   right: 700px;
   left: initial;
   animation-delay: 1.4s;
-  animation-duration: 1.25s;
+  animation-duration: 5.2s;
 }
 .star9 {
   top: 0px;
   right: 1000px;
   left: initial;
   animation-delay: 0.75s;
-  animation-duration: 2.25s;
+  animation-duration: 4.2s;
 }
 .star10 {
   top: 0px;
   right: 450px;
   left: initial;
   animation-delay: 2.75s;
-  animation-duration: 2.75s;
+  animation-duration: 3;
 }
