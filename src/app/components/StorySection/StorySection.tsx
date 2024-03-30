@@ -15,6 +15,14 @@ export default function MainFrame() {
   return (
     <section className="flex w-full flex-col">
       <section className="flex flex-row my-32 w-full h-fit py-32">
+        <div className="stars-container absolut h-full w-full">
+          <span className="star1"></span>
+
+          <span className="star3"></span>
+          <span className="star4"></span>
+
+          <span className="star8"></span>
+        </div>
         <div className="w-6/12 justify-center ">
           <div className="flex flex-col justify-center items-center h-full">
             <div className="w-64 relative">
@@ -46,6 +54,14 @@ export default function MainFrame() {
         </div>
       </section>
       <section className="flex flex-row justify-end w-full h-fit">
+        <div className="stars-container absolut h-full w-full">
+          <span className="star1"></span>
+
+          <span className="star3"></span>
+          <span className="star4"></span>
+
+          <span className="star8"></span>
+        </div>
         <div className="flex flex-col justify-center w-2/6">
           <h1 className="text-3xl font-semibold ">
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 font-bold text-transparent bg-clip-text">
@@ -77,6 +93,14 @@ export default function MainFrame() {
         </div>
       </section>
       <section className="flex flex-row my-32 w-full h-fit py-32">
+        <div className="stars-container absolut h-full w-full">
+          <span className="star1"></span>
+
+          <span className="star5"></span>
+
+          <span className="star8"></span>
+          <span className="star9"></span>
+        </div>
         <div className="w-6/12 justify-center ">
           <div className="flex flex-col justify-center items-center h-full">
             <div className="w-64 relative">
