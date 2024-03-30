@@ -21,7 +21,7 @@ export default function Home() {
     <NextUIProvider className="flex items-center flex-col min-h-screen">
       <NavBar scrollToJourney={scrollToJourney}></NavBar>
       <main className="flex flex-col max-w-screen-xl w-full h-full items-center dark text-foreground bg-background">
-        <MainFrame />
+        <MainFrame scrollToJourney={scrollToJourney} />
         <h1 className="text-4xl font-semibold py-6" id="journey-section">
           My{" "}
           <span className="bg-gradient-to-r from-cyan-600 to-blue-600 font-bold text-transparent bg-clip-text">

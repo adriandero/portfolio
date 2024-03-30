@@ -11,7 +11,7 @@ import { minus } from "react-icons-kit/feather/minus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-export default function MainFrame() {
+export default function MainFrame({ scrollToJourney }) {
   return (
     <section className="flex flex-col items-center w-full h-screen px-6 h-full">
       <div className="flex flex-row h-full">
@@ -62,7 +62,10 @@ export default function MainFrame() {
         </div>
       </div>
 
-      <div className="mouse_scroll absolute bottom-0 cursor-pointer">
+      <div
+        className="mouse_scroll absolute bottom-0 cursor-pointer"
+        onClick={scrollToJourney}
+      >
         <div className="mouse">
           <div className="wheel"></div>
         </div>
