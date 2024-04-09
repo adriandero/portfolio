@@ -11,7 +11,7 @@ import { minus } from "react-icons-kit/feather/minus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-export default function MainFrame() {
+export default function StorySection() {
   return (
     <section className="flex w-full flex-col">
       <section className="flex flex-row my-32 w-full h-fit py-32">

@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar/NavBar";
 import "./page.css";
 import MainFrame from "./components/MainFrame/MainFrame";
 import StorySection from "./components/StorySection/StorySection";
+import WorkSection from "./components/WorkSection/WorkSection";
 
 export default function Home() {
   function scrollToJourney() {
@@ -29,7 +30,14 @@ export default function Home() {
           </span>
         </h1>
         <StorySection />
+        <h1 className="text-4xl font-semibold py-6" id="journey-section">
+          My{" "}
+          <span className="bg-gradient-to-r from-cyan-600 to-blue-600 font-bold text-transparent bg-clip-text">
+            Work
+          </span>
+        </h1>
       </main>
+      <WorkSection />
     </NextUIProvider>
   );
 }
