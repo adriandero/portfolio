@@ -1,6 +1,8 @@
 import React from "react";
 import "./StorySection.css";
 import avatarImage from "./CIO_Kongress.png";
+import spengergasseLogoSvg from "../../../../public/spengergasseLogoSvg.svg";
+
 import Image from "next/image";
 import { Button, NextUIProvider } from "@nextui-org/react";
 
@@ -83,7 +85,7 @@ export default function StorySection() {
 
               <div className="avatar float-l w-64 deltoid">
                 <Image
-                  src={avatarImage}
+                  src={spengergasseLogoSvg}
                   alt="Adrian Profile"
                   className="img left-auto"
                 />

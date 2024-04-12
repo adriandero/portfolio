@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import "./WorkSection.css";
 import Image from "next/image";
 
@@ -12,48 +12,48 @@ import { minus } from "react-icons-kit/feather/minus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
+import WorkCard from "../WorkCard/WorkCard";
+
 export default function WorkSection() {
+  const [is1Selected, setIs1Selected] = useState(true);
+  const [is2Selected, setIs2Selected] = useState(true);
+  const [is3Selected, setIs3Selected] = useState(true);
+
+  /*
+  const handleClick = useCallback(() => {
+    console.log("eeeee");
+    set1IsSelected(true);
+  }, [is1Selected]);
+  */
+
   return (
     <section
-      className="flex w-full justify-center items-center"
+      className="flex w-full flex-wrap justify-center items-center max-w-screen-xl"
       style={{ height: "80vh" }}
     >
-      <Card isFooterBlurred radius="lg" className="border-none h-3/5 mx-8">
-        <Image
-          alt="Bitpanda Cover Image"
-          className="object-cover overflow-hidden h-full"
-          src={bitpandaImage}
-        />
-        <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-          <p className="text-tiny text-white/80">Available soon.</p>
-        </CardFooter>
-      </Card>
-      <Card isFooterBlurred radius="lg" className="border-none h-3/5 mx-8">
-        <Image
-          alt="Bitpanda Cover Image"
-          className="object-cover overflow-hidden h-full"
-          src={bitpandaImage}
-        />
-        <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-          <p className="text-tiny text-white/80">Available soon.</p>
-        </CardFooter>
-      </Card>
-      <Card isFooterBlurred radius="lg" className="border-none h-3/5 mx-8">
-        <Image
-          alt="Bitpanda Cover Image"
-          className="object-cover overflow-hidden h-full"
-          src={bitpandaImage}
-        />
-        <CardFooter className="absolute bg-default/50 bottom-0 border-t-1 border-default/100 z-10 justify-between">
-          <div>
-            <p className="text-black text-tiny">Available soon.</p>
-            <p className="text-black text-tiny">Get notified.</p>
-          </div>
-          <Button className="text-tiny" color="primary" radius="full" size="sm">
-            Notify Me
-          </Button>
-        </CardFooter>
-      </Card>
+      {is1Selected && (
+        <div className="absolute left-0 right-0 text-center z-10">
+          <h1 className="text-6xl font-bold mb-8">Huge Headline Here</h1>{" "}
+          {/* Huge headline */}
+        </div>
+      )}
+      <WorkCard
+        projectTitle={"DROPS"}
+        companyTitle={"Bitpanda"}
+        startDate={"sep, 2023"}
+        endDate={"apr, 2024"}
+        role={"Backend Engineer + Team Lead"}
+        onMouseEnter={() => setIs1Selected(true)}
+        onMouseLeave={() => setIs1Selected(false)}
+      />
+      <WorkCard
+        onMouseEnter={() => setIs2Selected(true)}
+        onMouseLeave={() => setIs2Selected(false)}
+      />
+      <WorkCard
+        onMouseEnter={() => setIs3Selected(true)}
+        onMouseLeave={() => setIs3Selected(false)}
+      />
     </section>
   );
 }
