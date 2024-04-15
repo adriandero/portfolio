@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./StorySection.css";
 import avatarImage from "./CIO_Kongress.png";
 import spengergasseLogoSvg from "../../../../public/spengergasseLogoSvg.svg";
@@ -15,7 +15,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function StorySection() {
   return (
-    <section className="flex w-full flex-col">
+    <section className="flex w-full h-full flex-col">
       <section className="flex flex-row my-32 w-full h-fit py-32">
         <div className="stars-container absolut h-full w-full">
           <span className="star1"></span>

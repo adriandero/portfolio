@@ -36,8 +36,8 @@ export default function Home() {
             Work
           </span>
         </h1>
+        <WorkSection />
       </main>
-      <WorkSection />
     </NextUIProvider>
   );
 }
