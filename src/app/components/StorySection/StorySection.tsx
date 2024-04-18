@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./StorySection.css";
 import avatarImage from "./CIO_Kongress.png";
 import spengergasseLogoSvg from "../../../../public/spengergasseLogoSvg.svg";
+import { Arrow } from "../Arrow/Arrow";
 
 import Image from "next/image";
 import { Button, NextUIProvider } from "@nextui-org/react";
@@ -14,8 +15,107 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function StorySection() {
+  const [pathLength, setPathLength] = useState(0);
+
+  const pathRef = useRef();
+  const dotRef = useRef();
+  const routeRef = useRef();
+
+  const [maxScrollTop, setMaxScrollTop] = useState(0);
+
+  useEffect(() => {
+    const path = pathRef.current as any;
+    const length = path.getTotalLength();
+    setPathLength(length);
+
+    const handleScroll = () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+      setMaxScrollTop(maxScroll);
+
+      const percentDone = scrollTop / maxScroll;
+      const newLength = percentDone * length;
+      path.style.strokeDasharray = `${newLength},${length}`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathLength]);
+
+  useEffect(() => {
+    const handleDotPosition = () => {
+      const scrollPercentage =
+        (window.pageYOffset || document.documentElement.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight);
+
+      const path = pathRef.current as any;
+      const pathLen = path.getTotalLength();
+      const pt = path.getPointAtLength(scrollPercentage * pathLen);
+
+      const dot = dotRef.current as any;
+      dot.setAttribute("transform", `translate(${pt.x},${pt.y})`);
+    };
+
+    window.addEventListener("scroll", handleDotPosition);
+    handleDotPosition();
+
+    return () => window.removeEventListener("scroll", handleDotPosition);
+  }, []);
+
   return (
     <section className="flex w-full h-full flex-col">
+      <svg
+        id="route"
+        ref={routeRef}
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="100%"
+        height="500"
+        viewBox="0 0 294.152 250.250"
+      >
+        <g transform="rotate(90)">
+          <path
+            fill-opacity="0"
+            style={{
+              fill: "none",
+              stroke: "#f2f2f2",
+              strokeLinecap: "round",
+              strokeMiterlimit: 10,
+              strokeWidth: "12px",
+            }}
+            d="M-11.65,51.59c31.63,0,31.63,22,63.26,22s31.63-22,63.26-22,31.63,22,63.26,22"
+            transform="translate(17.65 -45.59)"
+          />
+          <path
+            id="path"
+            ref={pathRef}
+            fill-opacity="0"
+            style={{
+              fill: "none",
+              stroke: "#7BFC75",
+              strokeLinecap: "round",
+              strokeMiterlimit: 10,
+              strokeWidth: "12px",
+            }}
+            d="M-11.65,51.59c31.63,0,31.63,22,63.26,22s31.63-22,63.26-22,31.63,22,63.26,22"
+            transform="translate(17.65 -45.59)"
+          />
+          <circle
+            cx="17.5"
+            cy="-45.5"
+            r="5"
+            fill="white"
+            id="dot"
+            ref={dotRef}
+          />
+        </g>
+      </svg>
+
       <section className="flex flex-row my-32 w-full h-fit py-32">
         <div className="stars-container absolut h-full w-full">
           <span className="star1"></span>

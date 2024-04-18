@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react";
 import "./WorkSection.css";
 import Image from "next/image";
 
-import bitpandaImage from "../../../../public/coinrain.jpg";
 import { Card, CardHeader, CardFooter, Button } from "@nextui-org/react";
 
 import { Icon } from "react-icons-kit";
@@ -16,6 +15,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import WorkCard from "../WorkCard/WorkCard";
+
+import bitpandaImage from "../../../../public/Bitpanda_image.jpg";
+import kontronImage from "../../../../public/Kontron_image.jpg";
+import allianzImage from "../../../../public/Allianz_image.png";
 
 export default function WorkSection() {
   const [is1Active, setIs1Active] = useState(true);
@@ -54,7 +57,7 @@ export default function WorkSection() {
       style={{ height: "80vh", maxHeight: "45rem" }}
     >
       <div
-        className={`animation-container overflow-hidden text-shadow absolute left-0 right-0 text-center z-10 pointer-events-none`}
+        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none`}
       >
         <h2
           className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -72,7 +75,7 @@ export default function WorkSection() {
         </h1>
       </div>
       <div
-        className={`animation-container overflow-hidden text-shadow absolute left-0 right-0 text-center z-10 pointer-events-none`}
+        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none`}
       >
         <h2
           className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -90,7 +93,7 @@ export default function WorkSection() {
         </h1>
       </div>
       <div
-        className={`animation-container overflow-hidden text-shadow absolute left-0 right-0 text-center z-10 pointer-events-none`}
+        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none`}
       >
         <h2
           className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -115,6 +118,7 @@ export default function WorkSection() {
         role={work1.role}
         isSelected={is1Selected}
         isActive={is1Active}
+        image={bitpandaImage}
         onMouseEnter={() => {
           setIs1Selected(true);
           setIs2Active(false);
@@ -134,6 +138,7 @@ export default function WorkSection() {
         role={work2.role}
         isSelected={is2Selected}
         isActive={is2Active}
+        image={allianzImage}
         onMouseEnter={() => {
           setIs2Selected(true);
           setIs1Active(false);
@@ -153,6 +158,7 @@ export default function WorkSection() {
         role={work3.role}
         isSelected={is3Selected}
         isActive={is3Active}
+        image={kontronImage}
         onMouseEnter={() => {
           setIs3Selected(true);
           setIs1Active(false);
