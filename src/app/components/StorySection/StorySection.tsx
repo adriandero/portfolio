@@ -69,6 +69,7 @@ export default function StorySection() {
 
   return (
     <section className="flex w-full h-full flex-col">
+      {/*
       <svg
         id="route"
         ref={routeRef}
@@ -113,6 +114,45 @@ export default function StorySection() {
             id="dot"
             ref={dotRef}
           />
+        </g>
+      </svg>
+*/}
+      <svg
+        id="route"
+        ref={routeRef}
+        width="662"
+        height="1559"
+        viewBox="0 0 662 1559"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute left-1/4"
+      >
+        <g>
+          <path
+            d="M346.749 5.99999C346.749 211.833 6.00003 234.167 6.00002 440C6.00001 645.833 656 786.667 656 992.5C656 1198.33 6.0001 1347.17 6.00009 1553"
+            fill-opacity="0"
+            style={{
+              fill: "none",
+              stroke: "#f2f2f2",
+              strokeLinecap: "round",
+              strokeMiterlimit: 10,
+              strokeWidth: "12px",
+            }}
+          />
+          <path
+            id="path"
+            ref={pathRef}
+            d="M346.749 5.99999C346.749 211.833 6.00003 234.167 6.00002 440C6.00001 645.833 656 786.667 656 992.5C656 1198.33 6.0001 1347.17 6.00009 1553"
+            fill-opacity="0"
+            style={{
+              fill: "none",
+              stroke: "#7B7B7B",
+              strokeLinecap: "round",
+              strokeMiterlimit: 10,
+              strokeWidth: "12px",
+            }}
+          />
+          <circle r="5" fill="red" id="dot" ref={dotRef} />
         </g>
       </svg>
 
