@@ -21,7 +21,7 @@
   height: 4px;
   background: #ffffffb5;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+  box-shadow: 0 0 0 4px #ffffff1a,
     0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
   animation: animate 5s linear infinite;
 }

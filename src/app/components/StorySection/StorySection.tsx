@@ -18,7 +18,9 @@ export default function StorySection() {
   const [pathLength, setPathLength] = useState(0);
 
   const pathRef = useRef();
-  const dotRef = useRef();
+  const dotRef1 = useRef();  
+  const dotRef2 = useRef();
+  const dotRef3 = useRef();
   const routeRef = useRef();
 
   const [maxScrollTop, setMaxScrollTop] = useState(0);
@@ -29,14 +31,23 @@ export default function StorySection() {
     setPathLength(length);
 
     const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const maxScroll =
-        document.documentElement.scrollHeight - window.innerHeight;
-      setMaxScrollTop(maxScroll);
+      let scrollPercentage = 0;
+     
+      const section:any = document.getElementById('storySection');
 
-      const percentDone = scrollTop / maxScroll;
-      const newLength = percentDone * length;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const sectionTop = section.offsetTop - 50;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      // Check if the user has scrolled to the section
+      if (scrollTop >= sectionTop && scrollTop) {
+          // Calculate the scroll percentage relative to the section
+          scrollPercentage = (scrollTop - sectionTop) / (sectionHeight - windowHeight);
+          console.log("Scroll percentage within the section:", scrollPercentage);
+      }
+
+      const newLength = scrollPercentage * length;
       path.style.strokeDasharray = `${newLength},${length}`;
     };
 
@@ -48,17 +59,35 @@ export default function StorySection() {
 
   useEffect(() => {
     const handleDotPosition = () => {
-      const scrollPercentage =
-        (window.pageYOffset || document.documentElement.scrollTop) /
-        (document.documentElement.scrollHeight -
-          document.documentElement.clientHeight);
+      let scrollPercentage = 0;
+     
+      const section:any = document.getElementById('storySection');
+
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const sectionTop = section.offsetTop - 50;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+
+      // Check if the user has scrolled to the section
+      if (scrollTop >= sectionTop && scrollTop <= sectionTop + sectionHeight - windowHeight) {
+          // Calculate the scroll percentage relative to the section
+          scrollPercentage = (scrollTop - sectionTop) / (sectionHeight - windowHeight);
+          console.log("Scroll percentage within the section:", scrollPercentage);
+      }
+
 
       const path = pathRef.current as any;
       const pathLen = path.getTotalLength();
       const pt = path.getPointAtLength(scrollPercentage * pathLen);
 
-      const dot = dotRef.current as any;
-      dot.setAttribute("transform", `translate(${pt.x},${pt.y})`);
+      const dot1 = dotRef1.current as any;
+      const dot2 = dotRef2.current as any;
+      const dot3 = dotRef3.current as any;
+
+      dot1.setAttribute("transform", `translate(${pt.x},${pt.y})`);
+      dot2.setAttribute("transform", `translate(${pt.x},${pt.y})`);
+      dot3.setAttribute("transform", `translate(${pt.x},${pt.y})`);
+
     };
 
     window.addEventListener("scroll", handleDotPosition);
@@ -68,7 +97,7 @@ export default function StorySection() {
   }, []);
 
   return (
-    <section className="flex w-full h-full flex-col">
+    <section id="storySection" className="flex w-full h-full flex-col items-center relative">
       {/*
       <svg
         id="route"
@@ -125,38 +154,30 @@ export default function StorySection() {
         viewBox="0 0 662 1559"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-1/4"
+        className="absolute overflow-visible"
       >
         <g>
           <path
-            d="M346.749 5.99999C346.749 211.833 6.00003 234.167 6.00002 440C6.00001 645.833 656 786.667 656 992.5C656 1198.33 6.0001 1347.17 6.00009 1553"
-            fill-opacity="0"
-            style={{
-              fill: "none",
-              stroke: "#f2f2f2",
-              strokeLinecap: "round",
-              strokeMiterlimit: 10,
-              strokeWidth: "12px",
-            }}
-          />
-          <path
-            id="path"
+            className="path"
             ref={pathRef}
-            d="M346.749 5.99999C346.749 211.833 6.00003 234.167 6.00002 440C6.00001 645.833 656 786.667 656 992.5C656 1198.33 6.0001 1347.17 6.00009 1553"
+            d="M331.738 5.99999C331.738 211.833 6.00003 234.167 6.00002 440C6.00001 645.833 675 786.667 675 992.5C675 1198.33 6.00011 1347.17 6.0001 1553"
             fill-opacity="0"
             style={{
               fill: "none",
-              stroke: "#7B7B7B",
+              stroke:"#ffffff94",
               strokeLinecap: "round",
               strokeMiterlimit: 10,
-              strokeWidth: "12px",
+              strokeWidth: "2px",
             }}
           />
-          <circle r="5" fill="red" id="dot" ref={dotRef} />
+          <circle r="3" fill="#ffffffb5" ref={dotRef1} />
+          <circle r="7" fill="#ffffff1a" ref={dotRef2} />
+          <circle r="10" fill="#ffffff1a" ref={dotRef3} />
+
         </g>
       </svg>
 
-      <section className="flex flex-row my-32 w-full h-fit py-32">
+      <section id="firstSection" className="flex flex-row my-32 w-full h-fit py-32">
         <div className="stars-container absolut h-full w-full">
           <span className="star1"></span>
 
