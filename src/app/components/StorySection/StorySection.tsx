@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import "./StorySection.css";
 import avatarImage from "./CIO_Kongress.png";
 import spengergasseLogoSvg from "../../../../public/spengergasseLogoSvg.svg";
-import { Arrow } from "../Arrow/Arrow";
 
 import Image from "next/image";
 import { Button, NextUIProvider } from "@nextui-org/react";
@@ -97,7 +96,7 @@ export default function StorySection() {
   }, []);
 
   return (
-    <section id="storySection" className="flex w-full h-full flex-col items-center relative">
+    <section id="storySection" className="flex w-full h-full flex-col items-center relative ">
       {/*
       <svg
         id="route"
@@ -177,7 +176,7 @@ export default function StorySection() {
         </g>
       </svg>
 
-      <section id="firstSection" className="flex flex-row my-32 w-full h-fit py-32">
+      <section id="firstSection" className="flex flex-row my-32 w-full h-fit py-32 ">
         <div className="stars-container absolut h-full w-full">
           <span className="star1"></span>
 
@@ -193,13 +192,12 @@ export default function StorySection() {
               <div className="float-m absolute z-10 bottom-0 right-0 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
               <div className="float-m absolute z-10 -top-20 left-10 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>
 
-              <div className="avatar float-l w-64 deltoid">
                 <Image
                   src={avatarImage}
                   alt="Adrian Profile"
-                  className="img left-auto"
+                  className="float-l max-h-96 h-auto w-auto"
                 />
-              </div>
+
             </div>
           </div>
         </div>
@@ -216,7 +214,7 @@ export default function StorySection() {
           </h2>
         </div>
       </section>
-      <section className="flex flex-row justify-end w-full h-fit">
+      <section className="flex flex-row justify-end w-full h-fit ">
         <div className="stars-container absolut h-full w-full">
           <span className="star1"></span>
 
@@ -244,18 +242,16 @@ export default function StorySection() {
               <div className="float-m absolute z-10 bottom-0 right-0 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
               <div className="float-m absolute z-10 -top-20 left-10 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>
 
-              <div className="avatar float-l w-64 deltoid">
-                <Image
+              <Image
                   src={spengergasseLogoSvg}
                   alt="Adrian Profile"
-                  className="img left-auto"
+                  className=" float-l h-96 w-auto"
                 />
-              </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="flex flex-row my-32 w-full h-fit py-32">
+      <section className="flex flex-row my-32 w-full h-fit py-32 ">
         <div className="stars-container absolut h-full w-full">
           <span className="star1"></span>
 
@@ -270,14 +266,11 @@ export default function StorySection() {
               <div className="float-s absolute z-10 bottom-20 -left-4 h-12 w-12 rounded-lg bg-black border-6 border-solid border-white"></div>
               <div className="float-m absolute z-10 bottom-0 right-0 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
               <div className="float-m absolute z-10 -top-20 left-10 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>
-
-              <div className="avatar float-l w-64 deltoid">
                 <Image
-                  src={avatarImage}
+                  src={spengergasseLogoSvg}
                   alt="Adrian Profile"
-                  className="img left-auto"
+                  className=" float-l h-96 w-auto"
                 />
-              </div>
             </div>
           </div>
         </div>

@@ -7,8 +7,6 @@
 }
 
 .img {
-  width: 200px !important; /* Make the image fill the container */
-  height: auto; /* Maintain aspect ratio */
   position: absolute;
   top: 50px; /* Adjust positioning to make SVG pop out */
   left: 45%; /* Adjust positioning to make SVG pop out */
