@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainFrame.css";
-import avatarImage from "./CIO_Kongress.png";
+import avatarImage from "../../../../public/profile-ball.png";
 import Image from "next/image";
 import { Button, NextUIProvider } from "@nextui-org/react";
 
@@ -14,8 +14,8 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 export default function MainFrame({ scrollToJourney }) {
   return (
     <section className="flex flex-col items-center w-full h-screen px-6 h-full">
-      <div className="flex flex-row h-full">
-        <div className="flex flex-col justify-center w-6/12">
+      <div className="flex flex-row h-full w-full relative justify-center">
+        <div className="flex flex-col justify-center absolute bottom-1/2 top-1/2 sm:w-6/12 sm:static z-20">
           <h1 className="text-4xl font-semibold">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 font-bold text-transparent bg-clip-text">
@@ -23,7 +23,7 @@ export default function MainFrame({ scrollToJourney }) {
             </span>
           </h1>
           <h1 className="text-4xl font-semibold">I build Software!</h1>
-          <h2 className="text-xl font-normal my-5 text-default-500 ">
+          <h2 className="text-xl font-normal my-5 sm:text-default-500 text-default-800 rounded-md	">
             Im a Vienna-based software engineer passionate about crafting and
             bringing ideas to life through elegant solutions.
           </h2>
@@ -33,7 +33,7 @@ export default function MainFrame({ scrollToJourney }) {
             color="primary"
             variant="shadow"
             radius="full"
-            className="w-fit text-xl mt-3 px-6"
+            className="w-fit min-h-10 text-xl mt-3 px-6"
           >
             Let's Chat
             <FontAwesomeIcon
@@ -43,20 +43,18 @@ export default function MainFrame({ scrollToJourney }) {
             />
           </Button>
         </div>
-        <div className="w-6/12">
-          <div className="flex flex-col justify-center items-center h-full">
+        <div className="sm:w-6/12 flex justify-center brightness-50 sm:brightness-100 blur-sm sm:blur-none">
+          <div className="flex flex-col justify-center items-center h-full ">
             <div className="w-64 relative">
-              <div className="float-s absolute z-10 bottom-20 -left-4 h-12 w-12 rounded-lg bg-black border-6 border-solid border-white"></div>
-              <div className="float-m absolute z-10 bottom-0 right-0 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
-              <div className="float-m absolute z-10 -top-20 left-10 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>
+              <div className="float-s absolute z-10 bottom-20 -left-4 h-12 w-12 rounded-xl bg-black border-6 border-solid border-white transform rotate-45"></div>
+              <div className="float-m absolute z-10 bottom-0 right-0 h-24 w-24 rounded-3xl bg-black border-6 border-solid border-white transform rotate-45"></div>
+              <div className="float-m absolute z-10 -top-20 left-10 h-16 w-16 rounded-2xl bg-black border-6 border-solid border-white transform rotate-45 "></div>
 
-              <div className="avatar float-l w-64 deltoid">
-                <Image
-                  src={avatarImage}
-                  alt="Adrian Profile"
-                  className="img left-auto"
-                />
-              </div>
+              <Image
+                src={avatarImage}
+                alt="Adrian Profile"
+                className="img float-l"
+              />
             </div>
           </div>
         </div>
