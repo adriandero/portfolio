@@ -23,11 +23,11 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 export default function StorySection() {
   const [pathLength, setPathLength] = useState(0);
 
-  const pathRef = useRef();
-  const dotRef1 = useRef();
-  const dotRef2 = useRef();
-  const dotRef3 = useRef();
-  const routeRef = useRef();
+  const pathRef = useRef<SVGPathElement>(null);
+  const dotRef1 = useRef<SVGCircleElement>(null);
+  const dotRef2 = useRef<SVGCircleElement>(null);
+  const dotRef3 = useRef<SVGCircleElement>(null);
+  const routeRef = useRef<SVGSVGElement>(null);
 
   const [maxScrollTop, setMaxScrollTop] = useState(0);
 
