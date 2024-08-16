@@ -1,0 +1,221 @@
+.stars-container {
+  position: absolute;
+  overflow: hidden;
+}
+
+@keyframes animateBg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.stars-container > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #ffffffb5;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px #ffffff1a,
+    0 0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  animation: animate 5s linear infinite;
+}
+.stars-container > *::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff94, transparent);
+}
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  70% {
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.star1 {
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+.star2 {
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 4.4s;
+}
+.star3 {
+  top: 80;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 5.2;
+}
+.star4 {
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 4.1s;
+}
+.star5 {
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 4.9s;
+}
+.star6 {
+  top: 0;
+  right: 600px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 5.4s;
+}
+.star7 {
+  top: 300px;
+  left: 0px;
+  left: initial;
+  animation-delay: 1.2s;
+  animation-duration: 2s;
+}
+.star8 {
+  top: 0px;
+  right: 700px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 5.2s;
+}
+.star9 {
+  top: 0px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.75s;
+  animation-duration: 4.2s;
+}
+.star10 {
+  top: 0px;
+  right: 450px;
+  left: initial;
+  animation-delay: 2.75s;
+  animation-duration: 3;
+}
+
+$shootingStarContainerCount: 1;
+$shootingStarCount: 100;
+// Define the number of dots and range for size and opacity
+$dot-count: 20;
+$dot-size-min: 4px; // Min size
+$dot-size-max: 10px; // Max size
+$opacity-min: 0; // Min opacity
+$opacity-max: 1; // Max opacity
+$dot-bg: #161616;
+$dot-color: #e82f2f;
+$dot-space: 50px;
+
+$starContainerCount: 1;
+$starCount: 100;
+
+// Generate a random number between min and max
+@function random-between($min, $max) {
+  @return $min + random($max - $min);
+}
+
+// Generate a random opacity
+@function random-opacity() {
+  @return $opacity-min + (random($opacity-max - $opacity-min) / 100);
+}
+
+.shootingStarContainer {
+  @for $j from 1 through $shootingStarContainerCount {
+    &:nth-child(#{$j}) {
+      position: absolute;
+      width: 100%;
+      height: 130%;
+      transform: rotate(random(10) + 35deg);
+      left: -400px;
+    }
+  }
+}
+
+.shootingStar {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(-70deg, rgba(255, 235, 235, 1), rgba(0, 0, 0, 1));
+
+  @for $j from 1 through $shootingStarContainerCount {
+    @for $i from 1 through $shootingStarCount {
+      .shootingStarContainer:nth-child(#{$j}) &:nth-child(#{$i}) {
+        $delay: random(8000) + 200ms;
+        $duration: random(2000) + 7750ms;
+        left: calc(#{random(50) + 0%});
+        top: calc(#{random(98) + 1%});
+
+        animation: shootingFrames $duration ease-in-out $delay infinite;
+        opacity: random(75) / 100 + 0.15;
+      }
+    }
+  }
+}
+
+@keyframes shootingFrames {
+  0% {
+    transform: translateX(0);
+    width: 0;
+  }
+
+  5% {
+    width: 200px;
+  }
+
+  17% {
+    width: 0;
+    transform: translateX(random(100) + 800px);
+  }
+  100% {
+    width: 0;
+    transform: translateX(random(100) + 800px);
+  }
+}
+
+.star {
+  @for $i from 1 through $starCount {
+    &:nth-child(#{$i}) {
+      $randomSize: random(2) + 0px;
+
+      left: calc(#{random(100) + 0%});
+      top: calc(#{random(98) + 1%});
+      opacity: random(75) / 100 + 0.15;
+
+      position: absolute;
+
+      height: $randomSize;
+      width: $randomSize;
+      background-color: white;
+    }
+  }
+}

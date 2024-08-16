@@ -32,8 +32,10 @@ export default function NavBar({ scrollToJourney, scrollToWork }) {
         }, 200);
       },
       onClickMenu: function () {
-        this.onClick();
         setIsMenuOpen();
+        setTimeout(function () {
+          scrollToJourney();
+        }, 200);
       },
     },
     {
@@ -44,8 +46,10 @@ export default function NavBar({ scrollToJourney, scrollToWork }) {
         }, 200);
       },
       onClickMenu: function () {
-        this.onClick();
         setIsMenuOpen();
+        setTimeout(function () {
+          scrollToWork();
+        }, 200);
       },
     },
     { name: "About", onClick: () => {} },

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./StorySection.css";
+import "./StorySection.scss";
 import avatarImage from "./CIO_Kongress.png";
 import spengergasseLogoSvg from "../../../../public/spengergasseLogoSvg.svg";
 import storyWork from "../../../../public/story-cio.png";
@@ -17,6 +17,8 @@ import { minus } from "react-icons-kit/feather/minus";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function StorySection() {
   const [pathLength, setPathLength] = useState(0);
@@ -110,54 +112,61 @@ export default function StorySection() {
       id="storySection"
       className="flex w-full h-full flex-col items-center relative md:py-32"
     >
-      {/*
-      <svg
-        id="route"
-        ref={routeRef}
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        width="100%"
-        height="500"
-        viewBox="0 0 294.152 250.250"
-      >
-        <g transform="rotate(90)">
-          <path
-            fill-opacity="0"
-            style={{
-              fill: "none",
-              stroke: "#f2f2f2",
-              strokeLinecap: "round",
-              strokeMiterlimit: 10,
-              strokeWidth: "12px",
-            }}
-            d="M-11.65,51.59c31.63,0,31.63,22,63.26,22s31.63-22,63.26-22,31.63,22,63.26,22"
-            transform="translate(17.65 -45.59)"
-          />
-          <path
-            id="path"
-            ref={pathRef}
-            fill-opacity="0"
-            style={{
-              fill: "none",
-              stroke: "#7BFC75",
-              strokeLinecap: "round",
-              strokeMiterlimit: 10,
-              strokeWidth: "12px",
-            }}
-            d="M-11.65,51.59c31.63,0,31.63,22,63.26,22s31.63-22,63.26-22,31.63,22,63.26,22"
-            transform="translate(17.65 -45.59)"
-          />
-          <circle
-            cx="17.5"
-            cy="-45.5"
-            r="5"
-            fill="white"
-            id="dot"
-            ref={dotRef}
-          />
-        </g>
-      </svg>
-*/}
+      <div className="shootingStarContainer absolute h-full">
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+        <div className="shootingStar"></div>
+      </div>
+
+      <div className="starContainer absolute w-full h-full">
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+        <div className="star"></div>
+      </div>
 
       <svg
         id="route"

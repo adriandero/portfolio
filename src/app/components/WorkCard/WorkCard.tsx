@@ -3,7 +3,7 @@ import "./WorkCard.css";
 import Image from "next/image";
 
 import { Card, CardHeader, CardFooter, Button } from "@nextui-org/react";
-import { isWebpackServerLayer } from "next/dist/build/utils";
+
 interface PropsInterface {
   projectTitle?: String;
   companyTitle?: String;

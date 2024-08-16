@@ -46,24 +46,26 @@ export default function StoryPart({
     <>
       {isLeft ? (
         <>
-          <section className="flex flex-row flex-wrap  w-full h-fit my-16 md:my-36 justify-center md:justify-start">
+          <section className="flex flex-row flex-wrap  w-full h-fit my-16 md:my-36 justify-center md:justify-start relative my-52">
+            {/*{" "}
             <div className="stars-container absolut h-full w-full">
               <span className="star1"></span>
               <span className="star5"></span>
               <span className="star9"></span>
             </div>
+            */}
             <div className="w-6/12 justify-center ">
               <div className="flex flex-col justify-center items-center h-full">
                 <div className="w-64 relative">
                   {/*<div className="float-s absolute z-10 bottom-16 -left-8 h-12 w-12 rounded-lg bg-black border-6 border-solid border-white"></div>
-    <div className="float-m absolute z-10 -bottom-8 -right-8 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
-    <div className="float-m absolute z-10 -top-16 left-8 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>*/}
+                    <div className="float-m absolute z-10 -bottom-8 -right-8 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
+                    <div className="float-m absolute z-10 -top-16 left-8 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>*/}
 
                   {/*<Image
-        src={spengergasseLogoSvg}
-        alt="Adrian Profile"
-        className=" float-l h-96 w-auto"
-      />*/}
+                    src={spengergasseLogoSvg}
+                    alt="Adrian Profile"
+                    className=" float-l h-96 w-auto"
+                   />*/}
                   <Card
                     isFooterBlurred
                     radius="lg"
@@ -71,7 +73,7 @@ export default function StoryPart({
                   >
                     <Image
                       alt={imageAlt}
-                      className="object-cover"
+                      className="object-cover brightness-50 sm:brightness-100"
                       height={700}
                       src={image}
                     />
@@ -92,7 +94,7 @@ export default function StoryPart({
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center w-2/6 md:m-0 my-16 min-w-80">
+            <div className="flex flex-col justify-center w-2/6 md:m-0 my-16 min-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 sm:left-0 left-16">
               <h1 className="text-3xl font-semibold ">
                 {titleSplit.map((word, index) => (
                   <React.Fragment key={index}>
@@ -109,13 +111,14 @@ export default function StoryPart({
         </>
       ) : (
         <>
-          <section className="flex flex-row md:flex-wrap flex-wrap-reverse  w-full h-fit my-16 md:my-36 justify-center md:justify-end">
-            <div className="stars-container absolut h-full w-full">
+          <section className="flex flex-row md:flex-wrap flex-wrap-reverse w-full h-fit my-16 md:my-36 justify-center md:justify-end relative ">
+            {/*   <div className="stars-container absolut h-full w-full">
               <span className="star1"></span>
               <span className="star5"></span>
               <span className="star9"></span>
             </div>
-            <div className="flex flex-col justify-center w-2/6 md:m-0 my-16 min-w-80 ">
+            */}
+            <div className="flex flex-col justify-center w-2/6 md:m-0 my-16 min-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 z-20 sm:z-0 sm:right-0 right-16">
               <h1 className="text-3xl font-semibold ">
                 {titleSplit.map((word, index) => (
                   <React.Fragment key={index}>
@@ -128,18 +131,18 @@ export default function StoryPart({
                 {description}
               </h2>
             </div>
-            <div className="w-6/12 justify-center ">
+            <div className="w-6/12 justify-center">
               <div className="flex flex-col justify-center items-center h-full">
                 <div className="w-64 relative">
                   {/*<div className="float-s absolute z-10 bottom-16 -left-8 h-12 w-12 rounded-lg bg-black border-6 border-solid border-white"></div>
-<div className="float-m absolute z-10 -bottom-8 -right-8 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
-<div className="float-m absolute z-10 -top-16 left-8 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>*/}
+                    <div className="float-m absolute z-10 -bottom-8 -right-8 h-24 w-24 rounded-2xl bg-black border-6 border-solid border-white"></div>
+                    <div className="float-m absolute z-10 -top-16 left-8 h-16 w-16 rounded-xl bg-black border-6 border-solid border-white"></div>*/}
 
                   {/*<Image
-src={spengergasseLogoSvg}
-alt="Adrian Profile"
-className=" float-l h-96 w-auto"
-/>*/}
+                      src={spengergasseLogoSvg}
+                      alt="Adrian Profile"
+                      className=" float-l h-96 w-auto"
+                    />*/}
                   <Card
                     isFooterBlurred
                     radius="lg"
@@ -147,7 +150,7 @@ className=" float-l h-96 w-auto"
                   >
                     <Image
                       alt={imageAlt}
-                      className="object-cover"
+                      className="object-cover brightness-50 sm:brightness-100"
                       height={700}
                       src={image}
                     />
