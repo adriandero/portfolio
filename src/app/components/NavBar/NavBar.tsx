@@ -18,8 +18,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFingerprint } from "@fortawesome/free-solid-svg-icons";
 
 interface PropsInterface {
-  scrollToJourney?: () => {};
-  scrollToWork?: () => {};
+  scrollToJourney: () => {};
+  scrollToWork: () => {};
 }
 
 export default function NavBar({
