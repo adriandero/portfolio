@@ -11,7 +11,11 @@ import { minus } from "react-icons-kit/feather/minus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-export default function MainFrame({ scrollToJourney }) {
+interface PropsInterface {
+  scrollToJourney?: () => {};
+}
+
+export default function MainFrame({ scrollToJourney }: PropsInterface) {
   return (
     <section className="flex flex-col items-center w-full h-screen px-6 h-full">
       <div className="flex flex-row h-full w-full relative justify-center">
