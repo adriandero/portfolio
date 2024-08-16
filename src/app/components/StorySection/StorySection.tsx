@@ -214,7 +214,7 @@ export default function StorySection() {
         title={"My Journey Starts at Home"}
         accentedWordPosition={3}
         description={
-          "I coded my first website one summer after getting inspired by my older"
+          "I coded my first website one summer after getting inspired by my older brother"
         }
         image={storyHome}
         imageAlt={"Me at Home"}
