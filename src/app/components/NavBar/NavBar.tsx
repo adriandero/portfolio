@@ -17,7 +17,15 @@ import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFingerprint } from "@fortawesome/free-solid-svg-icons";
 
-export default function NavBar({ scrollToJourney, scrollToWork }) {
+interface PropsInterface {
+  scrollToJourney?: () => {};
+  scrollToWork?: () => {};
+}
+
+export default function NavBar({
+  scrollToJourney,
+  scrollToWork,
+}: PropsInterface) {
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
     false
