@@ -11,22 +11,25 @@ import StorySection from "./components/StorySection/StorySection";
 import WorkSection from "./components/WorkSection/WorkSection";
 
 export default function Home() {
-  function scrollToJourney() {
+  const scrollToJourney: () => {} = () => {
     const journeySection = document.getElementById("journey-section")!;
     journeySection.scrollIntoView({ behavior: "smooth" });
-    console.log("journey caled")
+    console.log("journey caled");
+    return {};
+  };
 
-  }
-
-  function scrollToWork() {
+  const scrollToWork: () => {} = () => {
     const workSection = document.getElementById("work-section")!;
     workSection.scrollIntoView({ behavior: "smooth" });
-  }
-
+    return {};
+  };
 
   return (
     <NextUIProvider className="flex items-center flex-col min-h-screen">
-      <NavBar scrollToJourney={scrollToJourney} scrollToWork={scrollToWork}></NavBar>
+      <NavBar
+        scrollToJourney={scrollToJourney}
+        scrollToWork={scrollToWork}
+      ></NavBar>
       <main className="flex flex-col max-w-screen-xl w-full h-full items-center dark text-foreground bg-background">
         <MainFrame scrollToJourney={scrollToJourney} />
         <h1 className="text-4xl font-semibold py-6" id="journey-section">
