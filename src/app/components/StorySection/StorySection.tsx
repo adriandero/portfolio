@@ -110,9 +110,12 @@ export default function StorySection() {
   return (
     <section
       id="storySection"
-      className="flex w-full h-full flex-col items-center relative md:py-32"
+      className="flex w-full h-full flex-col items-center relative md:py-32 overflow-hidden"
     >
-      <div className="shootingStarContainer absolute h-full">
+      <div
+        className="shootingStarContainer absolute h-full
+"
+      >
         <div className="shootingStar"></div>
         <div className="shootingStar"></div>
         <div className="shootingStar"></div>
@@ -125,7 +128,10 @@ export default function StorySection() {
         <div className="shootingStar"></div>
       </div>
 
-      <div className="starContainer absolute w-full h-full">
+      <div
+        className="starContainer absolute w-full h-full
+"
+      >
         <div className="star"></div>
         <div className="star"></div>
         <div className="star"></div>
