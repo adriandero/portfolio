@@ -72,7 +72,7 @@ export default function NavBar({
     >
       <NavbarContent>
         <NavbarBrand>
-          <a href="google.com" className="flex items-center">
+          <a href="" className="flex items-center">
             <AdrianLogo />
             <p className="ml-3 font-bold">Adrian De Ro</p>
           </a>
