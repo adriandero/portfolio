@@ -46,7 +46,7 @@ export default function StoryPart({
     <>
       {isLeft ? (
         <>
-          <section className="flex flex-row flex-wrap  w-full h-fit my-16 md:my-36 justify-center md:justify-start relative my-52">
+          <section className="flex flex-row w-full h-fit my-16 md:my-36 justify-center md:justify-start relative my-52">
             {/*{" "}
             <div className="stars-container absolut h-full w-full">
               <span className="star1"></span>
@@ -94,7 +94,7 @@ export default function StoryPart({
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center w-2/6 w-fit md:m-0 my-16 min-w-64 max-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 sm:left-0 xs:left-24 left-2">
+            <div className="flex flex-col justify-center w-2/6 w-fit md:m-0 my-16 min-w-64 sm:max-w-96 max-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 sm:left-0 xs:left-24 left-2">
               <h1 className="sm:text-3xl text-2xl font-semibold ">
                 {titleSplit.map((word, index) => (
                   <React.Fragment key={index}>
@@ -111,14 +111,14 @@ export default function StoryPart({
         </>
       ) : (
         <>
-          <section className="flex flex-row md:flex-wrap flex-wrap-reverse w-full h-fit my-16 md:my-36 justify-center md:justify-end relative ">
+          <section className="flex flex-row w-full h-fit my-16 md:my-36 justify-center md:justify-end relative ">
             {/*   <div className="stars-container absolut h-full w-full">
               <span className="star1"></span>
               <span className="star5"></span>
               <span className="star9"></span>
             </div>
             */}
-            <div className="flex flex-col justify-center sm:w-2/6 w-fit md:m-0 my-16 min-w-64 max-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 z-20 sm:z-0 sm:right-0 xs:right-24 right-2">
+            <div className="flex flex-col justify-center w-2/6 w-fit md:m-0 my-16 min-w-64 sm:max-w-96 max-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 z-20 sm:z-0 sm:right-0 xs:right-24 right-2">
               <h1 className="sm:text-3xl text-2xl font-semibold ">
                 {titleSplit.map((word, index) => (
                   <React.Fragment key={index}>
