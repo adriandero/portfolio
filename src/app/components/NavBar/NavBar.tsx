@@ -74,12 +74,14 @@ export default function NavBar({
         <NavbarBrand>
           <a href="" className="flex items-center">
             <AdrianLogo />
-            <p className="ml-3 font-bold">Adrian De Ro</p>
+            <p className="ml-3 font-bold text-md hidden xs:block ">
+              Adrian De Ro
+            </p>
           </a>
         </NavbarBrand>
         <NavbarItem className="sm:hidden">
-          <Button
-            id="contact-button"
+          {/*<Button
+            className="contact-button hidden"
             as={Link}
             color="primary"
             href="#"
@@ -87,10 +89,10 @@ export default function NavBar({
           >
             Get in Touch{" "}
             <FontAwesomeIcon
-              id="contact-button-touch-icon"
+              className="contact-button-touch-icon"
               icon={faFingerprint}
             />
-          </Button>
+          </Button>*/}
         </NavbarItem>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -115,7 +117,7 @@ export default function NavBar({
       <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem>
           <Button
-            id="contact-button"
+            className="contact-button"
             as={Link}
             color="primary"
             href="#"
@@ -123,7 +125,7 @@ export default function NavBar({
           >
             Get in Touch{" "}
             <FontAwesomeIcon
-              id="contact-button-touch-icon"
+              className="contact-button-touch-icon"
               icon={faFingerprint}
             />
           </Button>
@@ -144,6 +146,13 @@ export default function NavBar({
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarItem className="sm:hidden text-[#006FEE] contact-button-menu">
+          Get in Touch{" "}
+          <FontAwesomeIcon
+            className="contact-button-touch-icon"
+            icon={faFingerprint}
+          />
+        </NavbarItem>
       </NavbarMenu>
     </Navbar>
   );

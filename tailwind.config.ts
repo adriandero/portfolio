@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-const {nextui} = require("@nextui-org/react");
+const { nextui } = require("@nextui-org/react");
 
 const config: Config = {
   content: [
@@ -11,11 +11,12 @@ const config: Config = {
   theme: {
     extend: {
       borderWidth: {
-        '6': '6px'
+        "6": "6px",
       },
-      fontFamily:{
-        
-      }
+      fontFamily: {},
+      screens: {
+        xs: "420px",
+      },
     },
   },
   darkMode: "class",

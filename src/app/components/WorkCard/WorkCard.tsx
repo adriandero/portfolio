@@ -32,7 +32,7 @@ export default function WorkCard({
   return (
     //div is to overcome the tailwind hover bug - hover works with nextUI components but it cante ease out
     <div
-      className=" border-none  max-w-96 min-w-80 m-4 flex-[2_2_0%] transition duration-300 ease-in-out hover:scale-110"
+      className=" border-none  max-w-96 w-80 min-w-70 m-4 flex-[2_2_0%] transition duration-300 ease-in-out hover:scale-110"
       style={{ maxHeight: "30rem", height: "80vh" }}
     >
       <Card

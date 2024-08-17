@@ -20,14 +20,16 @@ export default function MainFrame({ scrollToJourney }: PropsInterface) {
     <section className="flex flex-col items-center w-full h-screen px-6 h-full">
       <div className="flex flex-row h-full w-full relative justify-center">
         <div className="flex flex-col justify-center absolute bottom-1/2 top-1/2 sm:w-6/12 sm:static z-20">
-          <h1 className="text-4xl font-semibold">
+          <h1 className="sm:text-4xl xs:text-3xl text-2xl font-semibold">
             Hi&sbquo; I&apos;m{" "}
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 font-bold text-transparent bg-clip-text">
               Adrian
             </span>
           </h1>
-          <h1 className="text-4xl font-semibold">I build Software!</h1>
-          <h2 className="text-xl font-normal my-5 sm:text-default-500 text-default-800 rounded-md	">
+          <h1 className="sm:text-4xl xs:text-3xl text-2xl font-semibold">
+            I build Software!
+          </h1>
+          <h2 className="sm:text-xl xs:text-lg text-base font-normal my-5 sm:text-default-500 text-default-800 rounded-md	">
             I&apos;m a Vienna&ndash;based software engineer passionate about
             crafting and bringing ideas to life through elegant solutions.
           </h2>
@@ -37,7 +39,7 @@ export default function MainFrame({ scrollToJourney }: PropsInterface) {
             color="primary"
             variant="shadow"
             radius="full"
-            className="w-fit min-h-10 text-xl mt-3 px-6"
+            className="w-fit min-h-10 sm:text-xl text-lg mt-3 px-6"
           >
             Let&apos;s Chat
             <FontAwesomeIcon

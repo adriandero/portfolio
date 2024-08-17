@@ -94,8 +94,8 @@ export default function StoryPart({
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center w-2/6 md:m-0 my-16 min-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 sm:left-0 left-16">
-              <h1 className="text-3xl font-semibold ">
+            <div className="flex flex-col justify-center w-2/6 w-fit md:m-0 my-16 min-w-64 max-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 sm:left-0 xs:left-24 left-2">
+              <h1 className="sm:text-3xl text-2xl font-semibold ">
                 {titleSplit.map((word, index) => (
                   <React.Fragment key={index}>
                     {index > 0 && " "}
@@ -103,7 +103,7 @@ export default function StoryPart({
                   </React.Fragment>
                 ))}
               </h1>
-              <h2 className="text-xl font-normal my-5 text-default-500 ">
+              <h2 className="sm:text-xl text-lg font-normal my-5 text-default-500 ">
                 {description}
               </h2>
             </div>
@@ -118,8 +118,8 @@ export default function StoryPart({
               <span className="star9"></span>
             </div>
             */}
-            <div className="flex flex-col justify-center w-2/6 md:m-0 my-16 min-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 z-20 sm:z-0 sm:right-0 right-16">
-              <h1 className="text-3xl font-semibold ">
+            <div className="flex flex-col justify-center sm:w-2/6 w-fit md:m-0 my-16 min-w-64 max-w-80 absolute sm:relative backdrop-filter backdrop-blur-sm bg-opacity-20 sm:border-0 border border-gray-100 border-opacity-20 sm:top-0 p-4 rounded-xl pb-0 top-14 z-20 sm:z-0 sm:right-0 xs:right-24 right-2">
+              <h1 className="sm:text-3xl text-2xl font-semibold ">
                 {titleSplit.map((word, index) => (
                   <React.Fragment key={index}>
                     {index > 0 && " "}
@@ -127,7 +127,7 @@ export default function StoryPart({
                   </React.Fragment>
                 ))}
               </h1>
-              <h2 className="text-xl font-normal my-5 text-default-500 ">
+              <h2 className="sm:text-xl text-lg font-normal my-5 text-default-500 ">
                 {description}
               </h2>
             </div>

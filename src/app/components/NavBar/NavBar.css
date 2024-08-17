@@ -1,15 +1,24 @@
-#contact-button-touch-icon,
-#contact-button,
+.contact-button-touch-icon,
+.contact-button,
+.contact-button-menu,
 .link {
   transition: transform 0.3s ease;
 }
 
-#contact-button:hover {
-  #contact-button-touch-icon {
+.contact-button:hover {
+  .contact-button-touch-icon {
     transform: rotate(15deg);
   }
 
   transform: scale(1.1);
+}
+
+.contact-button-menu:hover {
+  .contact-button-touch-icon {
+    transform: rotate(15deg) translateX(2px);
+  }
+
+  transform: scale(1.01) translateX(4px);
 }
 
 #nav-container header {
