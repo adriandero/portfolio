@@ -69,7 +69,7 @@ export default function NavBar({
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       id="nav-container"
-      className="sm:block absolute top-0 bg-transparent	"
+      className="sm:block sm:flex sm:justify-center absolute top-0 bg-transparent"
     >
       <NavbarContent>
         <NavbarBrand>
