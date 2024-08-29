@@ -230,7 +230,7 @@ export default function StorySection() {
         title={"Joining Higher Technical College"}
         accentedWordPosition={1}
         description={
-          "HTL Spengergasse and it’s high potential program enabled me to learn from amazing mentors"
+          "HTL Spengergasse and its high-potential program enabled me to learn from amazing mentors"
         }
         image={storyHighPot}
         imageAlt={"Group picture of the High Potential Program"}
@@ -240,7 +240,7 @@ export default function StorySection() {
         title={"Creating work that matters"} //TODO: Weird phrasing - all my work mattered, right?
         accentedWordPosition={1}
         description={
-          "Opportunity to work with many great companies to create insightfull software"
+          "Opportunity to work with many great companies to create insightful software"
         }
         image={storyWork}
         imageAlt={"Me at Home"}
