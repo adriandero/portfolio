@@ -20,6 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { faFile, faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+//import { IconProp } from "@fortawesome/fontawesome-svg-core"; //faGithub as Prop (but fixed with updating versions of icon libraries)
 
 interface PropsInterface {}
 
@@ -54,7 +55,7 @@ export default function ContactSection({}: PropsInterface) {
           onClick={() => router.push("mailto:adrian.dero@outlook.com")}
           className=" min-h-10 text-xl px-6 py-5 my-4"
         >
-          Let's Chat
+          Let&apos;s Chat
           <FontAwesomeIcon
             id="contact-button-arrow-icon"
             icon={faArrowRightLong}
