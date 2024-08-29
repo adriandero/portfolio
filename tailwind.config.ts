@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {},
       screens: {
+        work_md: "1071px", //TODO: redo the work-section ( there is currently this terrible implementation when you shorten to 1071 window size )
         xs: "420px",
       },
     },
