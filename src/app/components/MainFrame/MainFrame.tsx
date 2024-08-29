@@ -3,6 +3,7 @@ import "./MainFrame.css";
 import avatarImage from "../../../../public/profile-ball.png";
 import Image from "next/image";
 import { Button, NextUIProvider } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 import { Icon } from "react-icons-kit";
 import { arrowRight } from "react-icons-kit/feather/arrowRight";
@@ -16,6 +17,8 @@ interface PropsInterface {
 }
 
 export default function MainFrame({ scrollToJourney }: PropsInterface) {
+  const router = useRouter();
+
   return (
     <section className="flex flex-col items-center w-full h-screen px-6 h-full">
       <div className="flex flex-row h-full w-full relative justify-center">
@@ -39,6 +42,7 @@ export default function MainFrame({ scrollToJourney }: PropsInterface) {
             color="primary"
             variant="shadow"
             radius="full"
+            onClick={() => router.push("mailto:adrian.dero@outlook.com")}
             className="w-fit xs:min-h-10 min-h-9 sm:text-xl xs:test-lg text-base xs:mt-3 mt-2 px-4 xs:px-6"
           >
             Let&apos;s Chat

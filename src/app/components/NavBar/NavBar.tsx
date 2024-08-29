@@ -20,11 +20,13 @@ import { faFingerprint } from "@fortawesome/free-solid-svg-icons";
 interface PropsInterface {
   scrollToJourney: () => {};
   scrollToWork: () => {};
+  scrollToContact: () => {};
 }
 
 export default function NavBar({
   scrollToJourney,
   scrollToWork,
+  scrollToContact,
 }: PropsInterface) {
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
@@ -123,6 +125,11 @@ export default function NavBar({
             color="primary"
             href="#"
             variant="flat"
+            onClick={() => {
+              setTimeout(function () {
+                scrollToContact();
+              }, 200);
+            }}
           >
             Get in Touch{" "}
             <FontAwesomeIcon
@@ -147,7 +154,15 @@ export default function NavBar({
             </Link>
           </NavbarMenuItem>
         ))}
-        <NavbarItem className="sm:hidden text-[#006FEE] contact-button-menu">
+        <NavbarItem
+          className="sm:hidden text-[#006FEE] contact-button-menu"
+          onClick={() => {
+            setIsMenuOpen();
+            setTimeout(function () {
+              scrollToContact();
+            }, 200);
+          }}
+        >
           Get in Touch{" "}
           <FontAwesomeIcon
             className="contact-button-touch-icon"
