@@ -52,12 +52,9 @@ export default function WorkSection() {
   };
 
   return (
-    <section
-      className="flex w-full flex-wrap justify-center items-center max-w-screen-xl"
-      style={{ height: "80vh", maxHeight: "45rem" }}
-    >
+    <section className="flex w-full flex-wrap h-fit justify-center items-center max-w-screen-xl">
       <div
-        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none hidden md:block`}
+        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none hidden work_md:block`}
       >
         <h2
           className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -75,7 +72,7 @@ export default function WorkSection() {
         </h1>
       </div>
       <div
-        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none hidden md:block`}
+        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none hidden work_md:block`}
       >
         <h2
           className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -93,7 +90,7 @@ export default function WorkSection() {
         </h1>
       </div>
       <div
-        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none hidden md:block`}
+        className={`animation-container overflow-hidden absolute left-0 right-0 text-center z-10 pointer-events-none hidden work_md:block`}
       >
         <h2
           className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -133,7 +130,7 @@ export default function WorkSection() {
           }}
         />
         <div
-          className={`flex flex-col animation-container justify-center overflow-clip absolute right-0 top-0 bottom-0 left-0  text-center z-10 pointer-events-none md:hidden block `}
+          className={`flex flex-col animation-container justify-center overflow-clip absolute right-0 top-0 bottom-0 left-0  text-center z-10 pointer-events-none work_md:hidden block `}
         >
           <h2
             className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -143,7 +140,7 @@ export default function WorkSection() {
             {work1.companyTitle}
           </h2>
           <h1
-            className={`text-6xl font-bold mb-8  ${
+            className={`text-6xl font-bold mb-8 ${
               is1Selected ? "fade-in" : "fade-out"
             }`}
           >
@@ -173,7 +170,7 @@ export default function WorkSection() {
           }}
         />
         <div
-          className={`flex flex-col animation-container overflow-hidden justify-center absolute right-0 top-0 bottom-0 left-0 text-center z-10 pointer-events-none md:hidden block  `}
+          className={`flex flex-col animation-container overflow-hidden justify-center absolute right-0 top-0 bottom-0 left-0 text-center z-10 pointer-events-none work_md:hidden block  `}
         >
           <h2
             className={`text-3xl font-bold mb-2 opacity-0 ${
@@ -213,7 +210,7 @@ export default function WorkSection() {
           }}
         />
         <div
-          className={`flex flex-col animation-container overflow-hidden justify-center absolute right-0 top-0 bottom-0 left-0 text-center z-10 pointer-events-none md:hidden block `}
+          className={`flex flex-col animation-container overflow-hidden justify-center absolute right-0 top-0 bottom-0 left-0 text-center z-10 pointer-events-none work_md:hidden block `}
         >
           <h2
             className={`text-3xl font-bold mb-2 opacity-0 ${
