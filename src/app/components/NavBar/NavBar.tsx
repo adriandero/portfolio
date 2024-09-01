@@ -62,7 +62,6 @@ export default function NavBar({
         }, 200);
       },
     },
-    { name: "About", onClick: () => {} },
   ];
 
   return (
