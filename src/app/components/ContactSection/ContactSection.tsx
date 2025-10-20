@@ -138,8 +138,8 @@ export default function ContactSection({}: PropsInterface) {
           >
             <PopoverTrigger>
               <a
-                href="/Resume_De_Ro.pdf"
-                download="Resume_De_Ro"
+                href="/Resume_Adrian-Nikola_De_Ro.pdf"
+                download="Resume_Adrian-Nikola_De_Ro"
                 className="outline-none"
                 onClick={() => {
                   setIsResumePopoverOpen(true);
